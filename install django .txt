@@ -1,0 +1,77 @@
+🎯 أوامر إنشاء وتشغيل المشروع
+# إنشاء مشروع جديد
+django-admin startproject project_name
+
+# إنشاء تطبيق جديد داخل المشروع
+python manage.py startapp app_name
+
+# تشغيل السيرفر المحلي
+python manage.py runserver
+
+# تشغيل السيرفر على بورت معين
+python manage.py runserver 8080
+
+🗂️ أوامر قواعد البيانات (Migrations)
+# إنشاء ملفات المايجريشن (التغييرات على المودلز)
+python manage.py makemigrations
+
+# تنفيذ المايجريشن على قاعدة البيانات
+python manage.py migrate
+
+# عرض المايجريشن المتاحة
+python manage.py showmigrations
+
+# التراجع لخطوة مايجريشن معينة
+python manage.py migrate app_name migration_name
+
+
+👤 أوامر المستخدمين
+# إنشاء سوبر يوزر (Admin)
+python manage.py createsuperuser
+
+# تغيير كلمة سر المستخدم
+python manage.py changepassword username
+
+
+
+🛠️ أوامر الإدارة والصيانة
+# فتح Python shell مع إعدادات Django
+python manage.py shell
+
+# التحقق من وجود أخطاء
+python manage.py check
+
+# تنظيف ملفات المايجريشن الغير مستخدمة
+python manage.py squashmigrations app_name migration_number
+
+🌍 أوامر الترجمة (i18n)
+# إنشاء ملفات الترجمة
+python manage.py makemessages -l ar
+
+# تجميع الترجمات
+python manage.py compilemessages
+
+
+
+🧪 أوامر الاختبارات
+# تشغيل جميع الاختبارات
+python manage.py test
+
+# تشغيل اختبارات تطبيق معين
+python manage.py test app_name 
+
+
+
+📦 أوامر متقدمة
+# تشغيل السيرفر في بيئة معينة
+python manage.py runserver --settings=project_name.settings.dev
+
+# عمل dump لقاعدة البيانات
+python manage.py dumpdata > db.json
+
+# استرجاع قاعدة البيانات من ملف
+python manage.py loaddata db.json
+
+📌 تقدر تجيب كل الأوامر المتاحة في مشروعك بالأمر:
+
+python manage.py help
